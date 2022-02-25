@@ -22,16 +22,15 @@
 ![image](https://user-images.githubusercontent.com/74846298/155659492-91c21aef-4472-4a81-a110-5d2c8aac062e.png)
 
 ### 项目启动
-#### 1、项目里已经在**venu**文件夹里提供了所有的第三方库
-#### 2、需要修改的内容
+#### 1、需要修改的内容
 ```
 COVID文件夹里的models文件夹
 对于country.py,model.py, news.py, province.py这几个文件
 bro = webdriver.Chrome("C:/code/python/COVID/static/chromedriver.exe", options=options)
-第一个参数里的"C:/code"是你电脑上下载的本项目的路径，只需将你的路径替换原来的"C:/code"即可
+第一个参数里的"C:/code/python"是你电脑上下载的本项目的路径，只需将你的路径替换原来的"C:/code/python"即可
 ```
-#### 3、打开app.py文件，并运行此文件
-#### 4、在浏览器里输入127.0.0.1:5000/index即可运行
+#### 2、打开app.py文件，并运行此文件
+#### 3、在浏览器里输入127.0.0.1:5000/index即可运行
 
 ### 项目更进
 #### 1、由于数据还不全面，可视化左侧的图片未能做完
