@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+</head>
+<body>
+<div id="content">
+    <div id="first">欢迎使用 COVID-19 疫情数据可视化平台</div>
+    <div id="all">
+        <div id="l" class="box">
+            <div class="href">
+                <p>友情链接</p>
+                <ul>
+                    <li>
+                        <a href="https://news.qq.com/zt2020/page/feiyan.htm#/">1、腾讯新闻——疫情实时追踪</a>
+                    </li>
+                    <li>
+                        <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia?fraz=partner&paaz=gjyj">2、百度新型冠状病毒肺炎疫情实时大数据报告</a>
+                    </li>
+                    <li>
+                        <a href="https://ncov.dxy.cn/ncovh5/view/pneumonia">3、丁香园——疫情实时动态</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="r" class="box">
+            <p class="head">Welcome!</p>
+            {% if account %}
+            <div class="islog">
+                <p><a href="{{url_for('main_')}}">可视化平台</a></p>
+                <p>账号：{{account}}</p>
+                <p><a href="{{url_for('logout')}}">退出</a></p>
+            </div>
+            {% else %}
+            <div class="login">
+                <p><a href="{{url_for('login')}}">登录</a></p>
+                <p><a href="{{url_for('register')}}">注册</a></p>
+            </div>
+            {% endif %}
+            <div id="help">
+                <p>导航栏</p>
+                <ul>
+                    <li>
+                        <a href="http://bmfw.www.gov.cn/yqfxdjcx/index.html">疫情风险等级查询</a>
+                    </li>
+                    <li>
+                        <a href="https://gjzwfw.www.gov.cn/fwmh/healthCode/indexNucleic.do">核酸检测机构查询</a>
+                    </li>
+                    <li>
+                        <a href="https://www.piyao.org.cn/2020yqpy/">疫情防控辟谣</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="intro">
+                <p class="title">项目介绍</p>
+                <p class="content">
+                    &#0009;庚子年春，一场突如其来的新型冠状病毒疫情打破了我们宁静如水的生活，
+                    居家隔离成为了我们日常生活中的主旋律。 面对来势汹汹的未知疫情，党
+                    和国家没有自乱阵脚，而是采取了一系列措施，与病魔抗争到底。80多岁高
+                    龄的钟南山院士，毅然决然地领导抗疫小组奔赴武汉抗疫最前线，取得了诸
+                    多对抗击疫情有重大利好的研究成果。
+                </p>
+                <p class="content">
+                    &#0009;因此，为了全局掌控疫情的形势以及便于实现新冠肺炎密切接触者的排查监控，
+                    需要对疫情的情况进行统计归类以及分析，从而为党和国家以及医务工作人员的
+                    工作安排提供决策数据，最终成功解决掉新冠病毒对人民群众身体健康的威胁。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

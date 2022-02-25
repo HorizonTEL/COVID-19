@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/register.css">
+</head>
+<body>
+	<div id = "all">
+		<div class = "register">
+			<div class = "head">
+				欢迎注册疫情数据可视化平台
+			</div>
+			<form action="/register", method="post">
+				<div class="re_in">
+					<div class = "username">
+						<span class="iconfont">&#xe6a3;</span>
+						<input type="text" name="account">
+					</div>
+					<div class="password">
+						<span class="iconfont">&#xe652;</span>
+						<input type="password" name="password">
+					</div>
+					<div class = "phone">
+							<span class="iconfont">&#xe608;</span>
+							<input type="text" name="Phone">
+					</div>
+					<div class="captcha">
+						<span class="iconfont">&#xe65a;</span>
+						<input type="text" name="captcha">
+						<a href="#" class = "get_ca fr">获取验证码</a>
+					</div>
+				</div>
+				<div class="submit">
+					<button type="submit">注册</button>
+				</div>
+                <p id="wrong">{{wrong}}</p>
+				<!--
+				<div class = "agreement">
+					<input type="checkbox" name="ag" checked = "false">已阅读并同意以下协议<a href="agreement.html", target="_blank">平台服务协议、隐私权政策</a>
+				</div>
+				-->
+			</form>
+		</div>
+	</div>
+</body>
+</html>

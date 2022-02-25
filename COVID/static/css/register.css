@@ -1,0 +1,76 @@
+#all{
+	height: 350px;
+	background-color:rgba(244,244,244,0.5);
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left:35%;
+}
+
+#all .register {
+    margin-left: 53px;
+    margin-right: 53px;
+}
+
+#all .head{
+    margin-top:25px;
+	text-align: center;
+	color: #f40;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#all form{
+    margin-left: 6px;
+    margin-top:13px;
+}
+
+#all .re_in input{
+	margin-left: 11px;
+    margin-bottom: 8px;
+	outline: none;
+	border: none;
+	height: 30px;
+	width:164px;
+}
+
+#all .captcha input{
+    height: 30px;
+	width:110.7px;
+    margin-bottom: 10px;
+}
+
+#all .captcha a{
+	width: auto;
+	margin-top: 9px;
+	height: 30px;
+	background: #fff;
+}
+
+#all button{
+	width: 200px;
+	height: 30px;
+	margin-top:5px;
+    margin-bottom: 4px;
+	background: #f40;
+	text-align: center;
+	color:#fff;
+	border-radius:10px
+}
+
+#wrong{
+	text-align: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	color: red;
+	font-size: 12px;
+}
+
+#all .agreement{
+    width:200px;
+}
+
+#all .agreement a{
+	color: #f40;
+}

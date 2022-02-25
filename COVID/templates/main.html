@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+
+<script>
+    function showHint(str)
+    {
+      var xmlhttp;
+      if (str.length==0)
+      {
+        document.getElementById("txtHint").innerHTML="";
+        return;
+      }
+      if (window.XMLHttpRequest)
+      {
+        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+      }
+      else
+      {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+        }
+      }
+      xmlhttp.open("GET","/search?co="+str,true);
+      xmlhttp.send();
+    }
+
+    function showHidden() {
+        var x = document.getElementById("txtHint")
+        x.setAttribute('style', 'position: absolute; display: block;')
+    }
+    function hidHidden() {
+        var x = document.getElementById("txtHint")
+        x.setAttribute('style', 'display: none;')
+    }
+</script>
+
+<body>
+<div id="all">
+    <div id="first">
+        <span class="title">欢迎使用 COVID-19 疫情数据可视化平台</span>
+    </div>
+    <div id="left">
+        1
+    </div>
+    <div id="right">
+        <img src="../static/image/country.png">
+        <div class="information">
+            <p>疫情实时资讯</p>
+            <ul>
+              {% for i in range(data | length) %}
+                <li><a href={{data[i]['href']}}>
+                    {{i+1}}、{{ data[i]['name'] }}
+                </a></li>
+              {% endfor %}
+          </ul>
+        </div>
+    </div>
+    <div id="center">
+        <ul class="numbers">
+            <li>
+                <p>现有确诊</p>
+                <p style="color: #ff6a57;">{{confirmed}}</p>
+            </li>
+            <li>
+                <p>累计确诊</p>
+                <p style="color: #e83132;">{{died}}</p>
+            </li>
+            <li>
+                <p>累计治愈</p>
+                <p style="color: #10aeb5;">{{cured}}</p>
+            </li>
+            <li>
+                <p>累计死亡</p>
+                <p style="color: #4d5054;">{{curConfirm}}</p>
+            </li>
+        </ul>
+        <p class="s_t">全球国家疫情数据查询</p>
+        <div class="search">
+            <form action="/search" method="post">
+                <input type="text" name="co" onkeyup="showHint(this.value)" onfocus="showHidden()" onblur="hidHidden()">
+                <button type="submit">
+                    <span class="iconfont">&#xe6a2;</span>
+                </button>
+            </form>
+        </div>
+        <span>
+            <p id="txtHint"></p>
+        </span>
+        <div class="result">
+                {% if result %}
+                <p>国家名:{{result[0]}}</p>
+                <p style="float: left;">现存确诊: {{result[1]}}</p>
+                <p style="float: right;">累计确诊: {{result[2]}}</p>
+                <p style="float: left;">累计治愈: {{result[3]}}</p>
+                <p style="float: right;">累计死亡: {{result[4]}}</p>
+                {% elif result == [] %}
+                <p>无此国家或地区</p>
+                {% endif %}
+        </div>
+        <div class="map">
+            <p>全国现有确诊病例分布图</p>
+            <img src="../static/image/map.png">
+        </div>
+    </div>
+</div>
+</body>
+</html>

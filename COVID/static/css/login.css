@@ -1,0 +1,96 @@
+#all{
+	height: 350px;
+	background-color:rgba(244,244,244,0.5);
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left:35%;
+}
+
+
+
+#all .login{
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+#all .way{
+	margin-top:30px;
+	width: 250px;
+	height:15px;
+}
+#all .way li{
+	font-size:15px;
+	font-weight:bold;
+	float: left;
+	margin-left: 30px;
+	color:#f40;
+}
+
+#all .way li:hover{
+	background-color: #f40;
+	color: #fff;
+	border-radius:10px;
+}
+
+#all .way li.active{
+	text-decoration: underline;
+}
+
+#all .register{
+	margin-top:30px;
+	margin-left: 25px;
+	width:200px;
+	height:100px;
+}
+
+#all .userpsw div{
+	margin-top:13px;
+	margin-bottom: 13px;
+}
+
+#all .userpsw input{
+	margin-left: 11px;
+	outline: none;
+	border: none;
+	height: 30px;
+	width:160px;
+}
+
+#all .memory{
+	height: auto;
+	line-height: 15px;
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+#wrong{
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 8px;
+	color: red;
+	font-size: 12px;
+}
+
+#all button{
+	width: 200px;
+	height: 40px;
+	margin-top:12px;
+	background: #f40;
+	text-align: center;
+	color:#fff;
+	border-radius:10px
+}
+
+#all .last a{
+	width: auto;
+	height: auto;
+	float: right;
+	line-height: 30px;
+	text-decoration: underline;
+	margin-right: 5px;
+	margin-top:7px;
+	color: #6c6c6c;
+}
+

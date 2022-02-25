@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+</head>
+<body>
+	<div id = "all">
+		<div class = "login">
+			<div class = "way">
+				<ul class="clearfix">
+					<a href="#">
+						<li class = "active">账号登录</li>
+					</a>
+					<a href="#">
+						<li>手机验证码登陆</li>
+					</a>
+				</ul>
+			</div>
+			<div class = "register">
+				<form action="/login" method="post">
+					<div class = "userpsw">
+						<div class = "account">
+							<span class="iconfont">&#xe6a3;</span>
+							<input type="text" name="account">
+						</div>
+						<div class="password">
+							<span class="iconfont">&#xe652;</span>
+							<input type="password" name="password">
+						</div>
+					</div>
+					<div class = "memory">
+						<input type="checkbox">
+						<span>记住我</span>
+					</div>
+					<div class="submit">
+						<button type="submit">登陆</button>
+					</div>
+				</form>
+				<p id="wrong">{{wrong}}</p>
+				<div class = "last">
+					<ul>
+						<li>
+							<a href={{url_for('register')}} class = "fr">免费注册</a>
+						</li>
+						<li>
+							<a href="#" class = "fr">忘记密码</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

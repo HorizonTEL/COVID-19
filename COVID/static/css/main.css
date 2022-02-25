@@ -1,0 +1,142 @@
+#all{
+    background-color: rgba(255,255,255, 0.6);
+    max-width: 1190px;
+    margin: 30px 3%;
+}
+
+#first{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#first .title{
+    text-align: center;
+    font-size: 25px;
+}
+
+#left{
+    float: left;
+    left: 5%;
+    margin-left: 20px;
+}
+
+#right{
+    float: right;
+    right: 5%;
+    margin-right: 20px;
+}
+
+#right img{
+    width: 386px;
+    height: 298px;
+}
+
+#right div{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 350px;
+    font-size:16px;
+}
+
+#right .information p{
+    width: 350px;
+    font-size:20px;
+    text-align: center;
+}
+
+#right li{
+    background-color: rgba(255,255,255, 0.8);
+    margin-top: 15px;
+}
+
+#right a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#center{
+    margin: 0 auto;
+    width: 35%;
+}
+
+#center .numbers{
+    height: 100px;
+}
+
+#center .numbers li{
+    float: left;
+}
+
+#center .numbers p{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#center .s_t{
+    width: 369px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#center .search{
+    width: 369px;
+    border-radius: 25px;
+    background-color: rgba(255,255,255);
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+#center .search input{
+    margin-left: 40px;
+    float: left;
+    height: 30px;
+    width: 290px;
+    border: none;
+	outline: none;
+
+}
+
+#center .search button{
+    background:#fff;
+	border: none;
+	outline: none;
+	width: 30px;
+	height: 30px;
+}
+
+#center #txtHint{
+    display: none;
+	background-color: #fff;
+    width: 300px;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+#center .result{
+    margin-top: 20px;
+    height: 60px;
+}
+
+#center .result p{
+    font-size: 16px;
+    width:185px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+#center .map p{
+    margin-top: 30px;
+    font-size: 18px;
+    width: 369px;
+    text-align: center;
+}
+
+#center .map img{
+    margin-top: 20px;
+    margin-bottom: 55px;
+    width: 369px;
+    height: 281px;
+}

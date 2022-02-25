@@ -1,0 +1,96 @@
+body, p, h1, h2, h3, h4{
+	margin: 0;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img{
+	border: none;
+	vertical-align: middle;
+}
+
+a{
+	text-decoration: none; /*去掉下划线*/
+	color: #3c3c3c;
+}
+
+i{
+	font-style:normal;
+}
+
+input{
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body{
+	font: 12px/1.5 tahoma,
+	rial,'Hiragino Sans GB',
+	宋体,sans-serif;
+	/*12px/1.5 为行高*/
+	color: #3c3c3c;
+	background: #f4f4f4;
+}
+
+/*预定义*/
+/*清除浮动*/
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float: right;
+}
+
+/*居中*/
+.leayer{
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.mr7{
+	margin-right: 7px;
+}
+
+.mr12{
+	margin-right:12px;
+}
+
+.c5{
+	color:#f50;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.ttf?t=1637378406518') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+	background-image: url('../image/background.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
