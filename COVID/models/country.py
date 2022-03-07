@@ -28,7 +28,7 @@ def all_country_data():
     options.add_experimental_option('prefs', prefs)
     bro = webdriver.Chrome("C:/code/python/COVID/static/chromedriver.exe", options=options)
     bro.get('https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner')
-    bro.find_element(By.XPATH, '//div[@id="foreignTable"]//div[@class="Common_1-1-323_3lDRV2"]//span').click()
+    bro.find_element(By.XPATH, '//div[@id="foreignTable"]/div').click()
 
     countrys = bro.find_elements(By.XPATH, '//div[@id="foreignTable"]//tbody//table//tr')
     # print(countrys)
