@@ -31,7 +31,7 @@ class User(db.Model):
         return check_password_hash(self.password_hash, password)
 
 
-def inial_user():
+def initial_user():
     # 初始化admin
     admin = User(
         account='admin', password='admin888', if_admin=True, phone_number="12345678901", CreateTime=getNowDataTime()
