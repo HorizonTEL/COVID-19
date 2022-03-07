@@ -26,11 +26,11 @@ def get_news():
     bro = webdriver.Chrome("C:/code/python/COVID/static/chromedriver.exe", options=options)
     bro.get('https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner')
 
-    news = bro.find_elements(By.XPATH, '//div[@id="ptab-1"]/div[@class="Virus_1-1-323_2SKAfr"]/div')
+    news = bro.find_elements(By.XPATH, '//div[@id="ptab-1"]/div[3]/div')
     data = []
     for i in range(5):
-        news_href = news[i].find_element(By.XPATH, './/div[@class="Virus_1-1-323_TB6x3k"]/a').get_attribute('href')
-        news_name = news[i].find_element(By.XPATH, './/div[@class="Virus_1-1-323_TB6x3k"]//div').text
+        news_href = news[i].find_element(By.XPATH, './div[2]/a').get_attribute('href')
+        news_name = news[i].find_element(By.XPATH, './div[2]//div').text
         data.append(News(news_href=news_href, news_name=news_name))
 
     bro.quit()
