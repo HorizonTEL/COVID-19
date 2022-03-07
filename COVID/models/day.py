@@ -16,21 +16,21 @@ class Day(db.Model):
     
 def initial_day():
     days = [
-        Day(day_time='', day_confirm=3757, day_died=12, day_cured=312),
-        Day(day_time='', day_confirm=6816, day_died=36, day_cured=345),
-        Day(day_time='', day_confirm=6707, day_died=89, day_cured=327),
-        Day(day_time='', day_confirm=2818, day_died=40, day_cured=325),
-        Day(day_time='', day_confirm=4227, day_died=73, day_cured=362),
-        Day(day_time='', day_confirm=5347, day_died=80, day_cured=376),
-        Day(day_time='', day_confirm=5386, day_died=254, day_cured=597),
-        Day(day_time='', day_confirm=14376, day_died=326, day_cured=624),
-        Day(day_time='', day_confirm=38612, day_died=424, day_cured=667),
-        Day(day_time='', day_confirm=40351, day_died=376, day_cured=710),
-        Day(day_time='', day_confirm=20092, day_died=198, day_cured=648),
-        Day(day_time='', day_confirm=49768, day_died=408, day_cured=614),
-        Day(day_time='', day_confirm=23642, day_died=341, day_cured=712),
-        Day(day_time='', day_confirm=19272, day_died=233, day_cured=806),
-        Day(day_time='', day_confirm=25072, day_died=513, day_cured=806)
+        Day(day_time='2.21', day_confirm=3757, day_died=12, day_cured=312),
+        Day(day_time='2.22', day_confirm=6816, day_died=36, day_cured=345),
+        Day(day_time='2.23', day_confirm=6707, day_died=89, day_cured=327),
+        Day(day_time='2.24', day_confirm=2818, day_died=40, day_cured=325),
+        Day(day_time='2.25', day_confirm=4227, day_died=73, day_cured=362),
+        Day(day_time='2.26', day_confirm=5347, day_died=80, day_cured=376),
+        Day(day_time='2.27', day_confirm=5386, day_died=254, day_cured=597),
+        Day(day_time='2.28', day_confirm=14376, day_died=326, day_cured=624),
+        Day(day_time='3.1', day_confirm=38612, day_died=424, day_cured=667),
+        Day(day_time='3.2', day_confirm=40351, day_died=376, day_cured=710),
+        Day(day_time='3.3', day_confirm=20092, day_died=198, day_cured=648),
+        Day(day_time='3.4', day_confirm=49768, day_died=408, day_cured=614),
+        Day(day_time='3.5', day_confirm=23642, day_died=341, day_cured=712),
+        Day(day_time='3.6', day_confirm=19272, day_died=233, day_cured=806),
+        Day(day_time='3.7', day_confirm=25072, day_died=513, day_cured=806)
     ]
     
     db.session.add_all(days)
