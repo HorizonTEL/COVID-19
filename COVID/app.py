@@ -23,8 +23,8 @@ def create_db():
     db.drop_all()  # 每次运行，先删除再创建
     db.create_all()
     # 初始化user
-    inial_user()
-    # 初始化country_data
+    initial_user()
+    initial_day()
     all_map()
     all_country_data()
     all_province_data()
