@@ -19,7 +19,7 @@
 #### 2、登录注册
 ![image](https://user-images.githubusercontent.com/74846298/155659445-703906f8-ccef-41f5-86c5-cb66c396ea5a.png)
 #### 3、可视化主页
-![image](https://user-images.githubusercontent.com/74846298/155659492-91c21aef-4472-4a81-a110-5d2c8aac062e.png)
+![image](https://user-images.githubusercontent.com/74846298/160074468-a280b3ba-43d0-481b-9541-02e59b10701d.png)
 
 ### 项目启动
 #### 1、需要修改的内容
@@ -33,6 +33,5 @@ bro = webdriver.Chrome("C:/code/python/COVID/static/chromedriver.exe", options=o
 #### 3、在浏览器里输入127.0.0.1:5000/index即可运行
 
 ### 项目更进
-#### 1、由于数据还不全面，可视化左侧的图片未能做完
-#### 2、对后台的搭建和编写未完成
+#### 1、对后台的搭建和编写未完成
 
