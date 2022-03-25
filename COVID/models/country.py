@@ -40,6 +40,7 @@ def all_country_data():
             country_name = country.find_element(By.XPATH, './/div').text
 
         country_curConfirm = int(country.find_element(By.XPATH, './/td[2]').text)
+        # print(country_curConfirm)
         country_confirmed = int(country.find_element(By.XPATH, './/td[3]').text)
         country_cured = int(country.find_element(By.XPATH, './/td[4]').text)
         country_died = int(country.find_element(By.XPATH, './/td[5]').text)
@@ -68,3 +69,4 @@ def get_top5_data():
     plt.grid(axis='y', linestyle=':')
     # plt.show()
     plt.savefig(r'./static/image/country.png', dpi=500, bbox_inches='tight', transparent=True)
+    plt.clf()
