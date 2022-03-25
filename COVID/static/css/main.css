@@ -20,6 +20,14 @@
     margin-left: 20px;
 }
 
+#left img{
+    margin-bottom: 30px;
+    margin-left: -10px;
+    margin-top: 10px;
+    width: 367px;
+    height: 283px;
+}
+
 #right{
     float: right;
     right: 5%;
