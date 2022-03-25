@@ -12,7 +12,6 @@ class Province(db.Model):
     province_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     province_name = db.Column(db.String(32))
     province_add = db.Column(db.Integer)
-    province_curConfirm = db.Column(db.Integer)
     province_confirmed = db.Column(db.Integer)
     province_cured = db.Column(db.Integer)
     province_died = db.Column(db.Integer)
@@ -35,17 +34,16 @@ def all_province_data():
     # print(provinces)
     data = []
     for province in provinces:
-        province_name = province.find_element(By.XPATH, './/td//span[2]').text
+        province_name = province.find_element(By.XPATH, './/td//span[1]').text
         try:
             province_add = int(province.find_element(By.XPATH, './/td[2]').text)
         except:
             province_add = 0
-        province_curConfirm = int(province.find_element(By.XPATH, './/td[3]').text)
-        province_confirmed = int(province.find_element(By.XPATH, './/td[4]').text)
-        province_cured = int(province.find_element(By.XPATH, './/td[5]').text)
-        province_died = int(province.find_element(By.XPATH, './/td[6]').text)
+        province_confirmed = int(province.find_element(By.XPATH, './/td[3]').text)
+        province_cured = int(province.find_element(By.XPATH, './/td[4]').text)
+        province_died = int(province.find_element(By.XPATH, './/td[5]').text)
         data.append(Province(
-            province_name=province_name, province_add=province_add, province_curConfirm=province_curConfirm,
+            province_name=province_name, province_add=province_add,
             province_confirmed=province_confirmed, province_cured=province_cured, province_died=province_died)
         )
 
