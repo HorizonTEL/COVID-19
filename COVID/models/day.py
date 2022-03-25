@@ -13,7 +13,7 @@ class Day(db.Model):
     day_cured = db.Column(db.Integer)
     day_died = db.Column(db.Integer)
 
-    
+
 def initial_day():
     days = [
         Day(day_time='2.21', day_confirm=3757, day_died=12, day_cured=312),
@@ -30,9 +30,21 @@ def initial_day():
         Day(day_time='3.4', day_confirm=49768, day_died=408, day_cured=614),
         Day(day_time='3.5', day_confirm=23642, day_died=341, day_cured=712),
         Day(day_time='3.6', day_confirm=19272, day_died=233, day_cured=806),
-        Day(day_time='3.7', day_confirm=25072, day_died=513, day_cured=806)
+        Day(day_time='3.7', day_confirm=25072, day_died=513, day_cured=806),
+        Day(day_time='3.8', day_confirm=6166, day_died=280, day_cured=498),
+        Day(day_time='3.9', day_confirm=7599, day_died=320, day_cured=640),
+        Day(day_time='3.10', day_confirm=11042, day_died=420, day_cured=840),
+        Day(day_time='3.11', day_confirm=9585, day_died=579, day_cured=1020),
+        Day(day_time='3.12', day_confirm=5824, day_died=285, day_cured=1028),
+        Day(day_time='3.13', day_confirm=3234, day_died=326, day_cured=1129),
+        Day(day_time='3.14', day_confirm=4102, day_died=392, day_cured=1023),
+        Day(day_time='3.15', day_confirm=4001, day_died=343, day_cured=1304),
+        Day(day_time='3.16', day_confirm=3543, day_died=254, day_cured=908),
+        Day(day_time='3.17', day_confirm=4909, day_died=279, day_cured=1305),
+        Day(day_time='3.18', day_confirm=5105, day_died=408, day_cured=1079),
+        Day(day_time='3.19', day_confirm=6122, day_died=515, day_cured=1718)
     ]
-    
+
     db.session.add_all(days)
     db.session.commit()
 
@@ -70,3 +82,39 @@ def get_day_data():
         db.session.commit()
     db.session.add(day)
     db.session.commit()
+
+
+def get_all_days():
+    Days = Day.query.all()
+    confirmed = []
+    died = []
+    cured = []
+    day_time = []
+    for day in Days:
+        confirmed.append(day.day_confirm)
+        died.append(day.day_died)
+        cured.append(day.day_cured)
+        day_time.append(day.day_time)
+
+    # 每日新增
+    plt.rcParams['font.family'] = ['Fangsong']
+    plt.plot(day_time, confirmed, label='confirmed')
+    plt.xticks(day_time[2::3], rotation=45)
+    plt.legend()
+    # plt.show()
+    plt.title('全国每日新增确诊病例')
+    plt.grid(axis='y', linestyle=':')
+    plt.savefig(r'./static/image/day1.png', dpi=500, bbox_inches='tight', transparent=True)
+    plt.clf()
+
+    # 死亡和治愈
+    plt.rcParams['font.family'] = ['Fangsong']
+    plt.plot(day_time, died, label='died')
+    plt.plot(day_time, cured, label='cured')
+    plt.xticks(day_time[2::3], rotation=45)
+    plt.legend()
+    # plt.show()
+    plt.title('全国每日新增治愈和死亡病例')
+    plt.grid(axis='y', linestyle=':')
+    plt.savefig(r'./static/image/day2.png', dpi=500, bbox_inches='tight', transparent=True)
+    plt.clf()
